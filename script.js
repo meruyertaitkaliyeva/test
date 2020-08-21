@@ -1,3 +1,4 @@
+var sendmail = require('../sendmail')({silent: true})
 const fenceChoicePage = document.querySelector('.page__section--fence');
 const userContactsPage = document.querySelector('.page__section--contacts');
 const orderMessagePage = document.querySelector('.page__section--message');
@@ -43,7 +44,7 @@ let textLength = 0;
 let textHeight = 0;
 let count = 0;
 let words = ["метр", "метра", "метров"];
-let orderCount = 1;
+let orderCount = 0;
 
 function lengthCheckup() {
     if (!fenceLength.value) {
@@ -210,10 +211,22 @@ function requiredContacts() {
     }
 }
 
-function orderNumber() {
-    orderCount++;
-    return orderCount;
+function sendMail(userEmail, emailSubject, emailText) {
+    userEmail = userEmail.value;
+    emailSubject = 'тестовое задание, заказ забора №'+orderCount;
+    emailText = userName.value+', заказ №'+orderCount+' сформирован. В ближайшее время наш специалист свяжется с вами по телефону '+userPhone.value+'.';
+
+    sendmail({
+        from: 'fence-order@mail.com',
+        to: userEmail,
+        subject: emailSubject,
+        html: emailText
+    }, function(err, reply) {
+        console.log(err && err.stack)
+        console.dir(reply)
+    })
 }
+
 fenceLength.addEventListener('blur', lengthCheckup);
 fenceHeight.addEventListener('blur', heightCheckup);
 fenceMaterial.addEventListener('blur', materialCheckup);
@@ -267,5 +280,6 @@ userContactsForm.addEventListener('submit', function (evt) {
     userNameValue.innerHTML = userName.value;
     userEmailValue.innerHTML = userEmail.value;
     userPhoneValue.innerHTML = userPhone.value;
-    orderNumberValue.innerHTML = orderCount;
+    orderNumberValue.innerHTML = orderCount++;
+    sendMail();
 });
