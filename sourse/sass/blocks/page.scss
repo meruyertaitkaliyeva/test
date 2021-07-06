@@ -1,0 +1,23 @@
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $body-font-family;
+  text-align: center;
+  color: $basic-black;
+  background-color: $basic-white;
+}
+
+@media (max-width: $tablet-breakpoint) {
+  body .header__navigation--opened {
+    height: 100vh;
+    overflow-y: scroll;
+  }
+}
