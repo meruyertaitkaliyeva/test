@@ -1,0 +1,28 @@
+.topic {
+  width: 80px;
+  text-align: left;
+  font-family: $pt-font-family;
+  color: $basic-dark;
+}
+  
+.topic__question {
+  font-family: $oswald-font-family;
+  font-size: 48px;
+  line-height: 60px;
+  text-transform: capitalize;
+}
+  
+.topic__answer {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.topic__list-name {
+    font-weight: 700;
+}
+
+.topic__list-name,
+.topic__list {
+    font-size: 18px;
+    line-height: 27px;
+}

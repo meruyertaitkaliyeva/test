@@ -4,9 +4,7 @@
   list-style: none;
 }
 
-@mixin heading-style {
-  font-weight: 600;
-  font-size: 30px;
-  line-height: 30px;
-  color: $basic-dark;
+@mixin transition {
+  transition: background-color, color;
+  transition-duration: 0.5s;
 }

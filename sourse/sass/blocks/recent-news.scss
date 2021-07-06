@@ -1,0 +1,28 @@
+.recent-news {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.recent-news__title {
+    font-family: $oswald-font-family;
+    font-size: 14px;
+    line-height: 27px;
+    color: $darker-red;
+    text-transform: uppercase;
+}
+
+.recent-news__list {
+    @include list-style;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.recent-news__title {
+    font-family: $oswald-font-family;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 20px;
+    color: $basic-dark;
+}
