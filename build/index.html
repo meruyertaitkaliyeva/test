@@ -7,27 +7,31 @@
     <meta name="description" content="Page about lifestyle">
     <link rel="preload" href="fonts/pt-serif-v12-latin-italic.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/oswald-v36-latin-regular.woff2" as="font" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Test Task</title>
 </head>
 
 <body>
-    <header class="header">
+    <header id="top" class="header">
         <div class="header__inner header__inner--top container">
             <a class="header__logo">
-                <svg width="185" height="32" viewBox="0 0 185 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                <img src="img/icon-logo.svg" alt="Logo">
+                <!-- <svg width="185" height="32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
                     focusable="false">
                     <use xlink:href="img/sprite.svg#icon-logo"></use>
+                </svg> -->
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="132"
+                    height="18" viewBox="0 0 132 18" aria-hidden="true" focusable="false">
+                    <use xlink:href="img/sprite.svg#icon-text"></use>
                 </svg>
             </a>
-            <!-- <a class="header__logo-text">
-                <svg width="185" height="32" viewBox="0 0 185 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-                    <use xlink:href="img/sprite.svg#icon-logo"></use>                    
-                </svg>
-            </a> -->
             <ul class="header__interaction-list">
                 <li class="header__interaction-item">
-                    <a class="header__interaction-link header__interaction-link--login" href="#">Login</a>
+                    <a class="header__interaction-link header__interaction-link--login" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13"
+                            height="13" viewBox="0 0 13 13" aria-hidden="true" focusable="false">
+                            <use xlink:href="img/sprite.svg#icon-key"></use>
+                        </svg>Login</a>
                 </li>
                 <li class="header__interaction-item">
                     <a class="header__interaction-link header__interaction-link--contact" href="#">Contact me</a>
@@ -53,12 +57,16 @@
                         <a class="header__nav-link" href="#">Blog</a>
                     </li>
                 </ul>
-                <div class="header__nav-search">
-                    <form method="post">
-                        <input type="text" name="search" id="search">
-                        <label class="visually-hidden" for="search"></label>
-                    </form>
-                </div>
+                <form method="post">
+                    <div class="header__nav-search">
+                        <input type="text" name="search" id="search" placeholder="Search">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17"
+                            height="17" viewBox="0 0 17 17">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </div>
+                    <label class="visually-hidden" for="search"></label>
+                </form>
             </nav>
         </div>
     </header>
@@ -84,44 +92,45 @@
                     <li class="recent-news__item">
                         <a class="recent-news__link" href="#">
                             <img src="img/1.png" alt="Rocky shore">
-                            <h3 class="recent-news__title">Being in nature reduces stress, makes you more creative
+                            <h3 class="recent-news__description">Being in nature reduces stress, makes you more creative
                             </h3>
                         </a>
                     </li>
                     <li class="recent-news__item">
                         <a class="recent-news__link" href="#">
                             <img src="img/2.png" alt="Sunny field with trees">
-                            <h3 class="recent-news__title">Usability Testing for Mobile Is Easy</h3>
+                            <h3 class="recent-news__description">Usability Testing for Mobile&nbsp;Is Easy</h3>
                         </a>
                     </li>
                     <li class="recent-news__item">
                         <a class="recent-news__link" href="#">
                             <img src="img/3.png" alt="Building's facade">
-                            <h3 class="recent-news__title">Infinite Scrolling Is Not for Every Website</h3>
+                            <h3 class="recent-news__description">Infinite Scrolling Is Not for Every Website</h3>
                         </a>
                     </li>
                     <li class="recent-news__item">
                         <a class="recent-news__link" href="#">
                             <img src="img/4.png" alt="Snowy mountains and conifers">
-                            <h3 class="recent-news__title">Ecommerce UX: 3 Design Trends to Follow and 3 to Avoid
+                            <h3 class="recent-news__description">Ecommerce UX: 3 Design Trends to Follow and 3 to Avoid
                             </h3>
                         </a>
                     </li>
                     <li class="recent-news__item">
                         <a class="recent-news__link" href="#">
                             <img src="img/5.png" alt="White ship on the high seas">
-                            <h3 class="recent-news__title">University Websites: Top 10 Design Guidelines</h3>
+                            <h3 class="recent-news__description">University Websites: Top 10&nbsp;Design Guidelines</h3>
                         </a>
                     </li>
                     <li class="recent-news__item">
                         <a class="recent-news__link" href="#">
                             <img src="img/6.png" alt="Road and trees on the horizon">
-                            <h3 class="recent-news__title">University Websites: Top 10 Design Guidelines</h3>
+                            <h3 class="recent-news__description">University Websites: Top 10&nbsp;Design Guidelines</h3>
                         </a>
                     </li>
                 </ul>
             </section>
         </div>
+        <a class="main__go-up" href="#top">Top</a>
     </main>
 </body>
 

@@ -5,6 +5,6 @@
 }
 
 @mixin transition {
-  transition: background-color, color;
+  transition: background-color, color, border;
   transition-duration: 0.5s;
 }

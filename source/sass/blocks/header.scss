@@ -1,0 +1,141 @@
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &--top {
+    padding-top: 31px;
+    padding-bottom: 34px;
+  }
+}
+
+.header__logo {
+  display: flex;
+}
+
+.header__logo svg {
+  align-self: flex-end;
+  margin-left: 10px
+}
+
+.header__interaction-list {
+  @include list-style;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__interaction-link {
+  @include transition;
+  display: block;
+  font-family: $pt-font-family;
+  font-size: 13px;
+  line-height: 16.82px;
+  font-style: italic;
+  text-transform: uppercase;
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &--login {
+    padding: 15px 32px;
+    color: $basic-dark;
+    background-color: transparent;
+
+    &:focus,
+    &:hover {
+      color: $lighter-red;
+    }
+  }
+
+  &--contact {
+    width: 191px;
+    height: 46px;
+    padding: 15px 20px;
+    color: $basic-white;
+    background-color: $lighter-red;
+    text-align: center;
+
+    &:focus,
+    &:hover {
+      color: $basic-dark;
+      border: 1px solid $lighter-red;
+      background-color: $basic-white;
+    }
+  }
+}
+
+.header__interaction-link--login svg {
+  margin-right: 10px;
+}
+
+.header__wrapper {
+  width: 100%;
+  background-color: $basic-dark;
+}
+
+.header__nav-list {
+  @include list-style;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__nav-link {
+  @include transition;
+  display: block;
+  padding: 21px 17px 24px;
+  font-family: $oswald-font-family;
+  font-size: 19px;
+  line-height: 26.68px;
+  color: $basic-white;
+  background-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+
+  &:focus,
+  &:hover {
+    color: $lighter-red;
+  }
+
+  &:active {
+    color: $basic-white;
+    background-color: $lighter-red;
+  }
+
+  &--active {
+    background-color: $lighter-red;
+  }
+}
+
+.header__nav-search {
+  position: relative;
+  margin: 15px 0;
+}
+
+.header__nav-search svg {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 17px;
+  height: 17px;
+}
+
+.header__nav-search input {
+  width: 269px;
+  height: 40px;
+  padding: 12px 35px 12px 12px;
+  border: none;
+  font-family: $oswald-font-family;
+  font-size: 14px;
+  line-height: 20.75px;
+  color: $basic-dark;
+  background-color: $basic-white;
+  text-transform: uppercase;
+  outline: none;
+}

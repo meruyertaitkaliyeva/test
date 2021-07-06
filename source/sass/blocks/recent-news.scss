@@ -1,10 +1,11 @@
 .recent-news {
     display: flex;
     flex-direction: column;
-    padding: 20px 0;
+    width: 100%;
 }
 
 .recent-news__title {
+    margin-bottom: 17px;
     font-family: $oswald-font-family;
     font-size: 14px;
     line-height: 27px;
@@ -19,7 +20,30 @@
     gap: 20px;
 }
 
-.recent-news__title {
+.recent-news__link {
+    @include transition;
+    display: block;
+
+    &:active {
+        opacity: 0.5;
+    }
+
+    &:focus img,
+    &:hover img {
+        opacity: 0.8;
+    }
+
+    &:focus .recent-news__description,
+    &:hover .recent-news__description {
+        color: $darker-red;
+    }
+}
+
+.recent-news__item img {
+    margin-bottom: 7px;
+}
+
+.recent-news__description {
     font-family: $oswald-font-family;
     font-weight: 300;
     font-size: 18px;

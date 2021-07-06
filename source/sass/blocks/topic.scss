@@ -1,28 +1,40 @@
 .topic {
-  width: 80px;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  padding: 50px 0 55px;
   text-align: left;
   font-family: $pt-font-family;
   color: $basic-dark;
 }
   
 .topic__question {
+  width: 90%;
+  margin-bottom: 40px;
   font-family: $oswald-font-family;
   font-size: 48px;
   line-height: 60px;
   text-transform: capitalize;
+  letter-spacing: 0.9px;
 }
   
 .topic__answer {
+  margin-bottom: 32px;
   font-size: 24px;
-  line-height: 30px;
+  line-height: 36px;
 }
 
 .topic__list-name {
-    font-weight: 700;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 
 .topic__list-name,
 .topic__list {
-    font-size: 18px;
-    line-height: 27px;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.topic__list {
+  margin-left: 18px;
 }
