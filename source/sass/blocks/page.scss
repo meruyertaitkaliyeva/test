@@ -10,4 +10,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: $basic-white;
+
+  @media (max-width: $mobile-breakpoint) {
+    height: 100vh;
+    overflow-y: scroll;
+  }
 }

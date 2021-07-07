@@ -32,7 +32,16 @@ input[type="radio"].visually-hidden {
 }
 
 .container {
-  width: 1448px;
+  max-width: 1448px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 158px;
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 0 50px;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 0 20px;
+  }
 }

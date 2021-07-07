@@ -41,6 +41,7 @@
 
 .recent-news__item img {
     margin-bottom: 7px;
+    object-fit: cover;
 }
 
 .recent-news__description {
@@ -49,4 +50,25 @@
     font-size: 18px;
     line-height: 20px;
     color: $basic-dark;
+}
+
+@media (max-width: $tablet-breakpoint) {
+    .recent-news__list {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px 20px;
+    }
+
+    .recent-news__item img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .recent-news__list {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 30px 20px;
+    }
 }

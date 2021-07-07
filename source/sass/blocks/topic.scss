@@ -38,3 +38,9 @@
 .topic__list {
   margin-left: 18px;
 }
+
+@media (max-width: $mobile-breakpoint) {
+  .topic {
+    width: 100%;
+  }
+}

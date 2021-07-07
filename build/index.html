@@ -12,19 +12,16 @@
 </head>
 
 <body>
-    <header id="top" class="header">
+    <header id="top" class="header  header--closed header--nojs">
         <div class="header__inner header__inner--top container">
             <a class="header__logo">
                 <img src="img/icon-logo.svg" alt="Logo">
-                <!-- <svg width="185" height="32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                    focusable="false">
-                    <use xlink:href="img/sprite.svg#icon-logo"></use>
-                </svg> -->
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="132"
                     height="18" viewBox="0 0 132 18" aria-hidden="true" focusable="false">
                     <use xlink:href="img/sprite.svg#icon-text"></use>
                 </svg>
             </a>
+            <button class="header__toggle" type="button"></button>
             <ul class="header__interaction-list">
                 <li class="header__interaction-item">
                     <a class="header__interaction-link header__interaction-link--login" href="#">
@@ -59,13 +56,15 @@
                 </ul>
                 <form method="post">
                     <div class="header__nav-search">
+                        <label class="visually-hidden" for="search"></label>
                         <input type="text" name="search" id="search" placeholder="Search">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17"
-                            height="17" viewBox="0 0 17 17">
-                            <use xlink:href="img/sprite.svg#icon-search"></use>
-                        </svg>
+                        <button class="header__nav-submit" type="submit" aria-label="Search">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="17" height="17" viewBox="0 0 17 17" aria-hidden="true" focusable="false">
+                                <use xlink:href="img/sprite.svg#icon-search"></use>
+                            </svg>
+                        </button>
                     </div>
-                    <label class="visually-hidden" for="search"></label>
                 </form>
             </nav>
         </div>
@@ -130,8 +129,16 @@
                 </ul>
             </section>
         </div>
-        <a class="main__go-up" href="#top">Top</a>
+        <a class="main__go-up" href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="6"
+                viewBox="0 0 10 6" aria-hidden="true" focusable="false">
+                <use xlink:href="img/sprite.svg#icon-up"></use>
+            </svg>
+            Top
+        </a>
     </main>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

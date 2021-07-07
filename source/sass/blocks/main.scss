@@ -7,6 +7,7 @@
 }
 
 .main__go-up {
+  display: flex;
   position: absolute;
   bottom: 28px;
   right: 26px;
@@ -15,4 +16,9 @@
   font-size: 14px;
   color: gray;
   text-transform: lowercase;
+}
+
+.main__go-up svg {
+  margin-right: 7px;
+  align-self: center;
 }
