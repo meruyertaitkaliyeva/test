@@ -15,11 +15,8 @@
     <header id="top" class="header  header--closed header--nojs">
         <div class="header__inner header__inner--top container">
             <a class="header__logo">
-                <img src="img/icon-logo.svg" alt="Logo">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="132"
-                    height="18" viewBox="0 0 132 18" aria-hidden="true" focusable="false">
-                    <use xlink:href="img/sprite.svg#icon-text"></use>
-                </svg>
+                <p class="header__logo-name">Sitename</p>
+                <p class="header__logo-text">My first web page</p>
             </a>
             <button class="header__toggle" type="button"></button>
             <ul class="header__interaction-list">
@@ -39,19 +36,19 @@
             <nav class="header__inner header__inner--nav container">
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
-                        <a class="header__nav-link header__nav-link--active">Home</a>
+                        <a class="header__nav-link header__nav-link--home header__nav-link--active">Home</a>
                     </li>
                     <li class="header__nav-item">
-                        <a class="header__nav-link" href="#">About</a>
+                        <a class="header__nav-link header__nav-link--about" href="#">About</a>
                     </li>
                     <li class="header__nav-item">
-                        <a class="header__nav-link" href="#">News</a>
+                        <a class="header__nav-link header__nav-link--news" href="#">News</a>
                     </li>
                     <li class="header__nav-item">
-                        <a class="header__nav-link" href="#">Portfolio</a>
+                        <a class="header__nav-link header__nav-link--portfolio" href="#">Portfolio</a>
                     </li>
                     <li class="header__nav-item">
-                        <a class="header__nav-link" href="#">Blog</a>
+                        <a class="header__nav-link header__nav-link--blog" href="#">Blog</a>
                     </li>
                 </ul>
                 <form method="post">
@@ -73,8 +70,8 @@
         <h1 class="visually-hidden">Page about lifestyle</h1>
         <div class="main__wrapper container">
             <section class="main__topic topic">
-                <p class="topic__question">What 10 things should you do every day to improve your life?</p>
-                <p class="topic__answer">Learning another language can keep your mind sharp. Music lessons increase
+                <h2 class="topic__heading">What 10 things should you do every day to improve your life?</h2>
+                <p class="topic__text">Learning another language can keep your mind sharp. Music lessons increase
                     intelligence. Challenging your beliefs strengthens your mind. Increasing willpower just takes a
                     little effort each day and it’s more responsible for your success than IQ.</p>
                 <p class="topic__list-name">Key features</p>

@@ -28,6 +28,18 @@
   font-weight: 400;
   src: local(""), url("../fonts/oswald-v36-latin-regular.woff2") format("woff2"), url("../fonts/oswald-v36-latin-regular.woff") format("woff");
 }
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/oswald-v36-latin-regular.woff2") format("woff2"), url("../fonts/oswald-v36-latin-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/oswald-v36-latin-700.woff2") format("woff2"), url("../fonts/oswald-v36-latin-700.woff") format("woff");
+}
 * {
   margin: 0;
   padding: 0;
@@ -112,17 +124,32 @@ header {
   justify-content: space-between;
 }
 .header__inner--top {
-  padding-top: 31px;
-  padding-bottom: 34px;
+  padding-top: 27px;
+  padding-bottom: 32px;
 }
 
 .header__logo {
   display: flex;
 }
 
-.header__logo svg {
+.header__logo-name {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: #eb3c00;
+}
+
+.header__logo-text {
   align-self: flex-end;
-  margin-left: 10px;
+  margin-left: 8px;
+  font-family: "PT Serif", "Noto Serif", serif;
+  font-size: 18px;
+  line-height: 23.29px;
+  font-style: italic;
+  text-transform: lowercase;
+  color: #b1b1b1;
 }
 
 .header__interaction-list {
@@ -131,6 +158,7 @@ header {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  padding-top: 4px;
 }
 
 .header__interaction-link {
@@ -193,7 +221,7 @@ header {
   transition: background-color, color, border;
   transition-duration: 0.5s;
   display: block;
-  padding: 21px 17px 24px;
+  padding: 21px 16px 24px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 19px;
   line-height: 26.68px;
@@ -202,6 +230,12 @@ header {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.9px;
+}
+.header__nav-link--portfolio {
+  padding-left: 21px;
+}
+.header__nav-link--blog {
+  padding-left: 21px;
 }
 .header__nav-link:not(.header__nav-link--active):focus, .header__nav-link:not(.header__nav-link--active):hover {
   color: #ee4400;
@@ -215,7 +249,7 @@ header {
 }
 
 .header__wrapper form {
-  width: 24%;
+  width: 23.8%;
   min-width: 191px;
 }
 
@@ -273,7 +307,7 @@ header {
     flex-direction: column;
   }
 
-  .header__logo svg {
+  .header__logo-text {
     margin: 5px 0 0;
   }
 
@@ -455,13 +489,13 @@ header {
   flex-direction: column;
   flex-grow: 1;
   position: relative;
-  padding-bottom: 180px;
+  padding-bottom: 202px;
 }
 
 .main__go-up {
   display: flex;
   position: absolute;
-  bottom: 28px;
+  bottom: 49px;
   right: 26px;
   font-family: "Oswald", "Arial", sans-serif;
   font-weight: 300;
@@ -485,17 +519,18 @@ header {
   color: #282828;
 }
 
-.topic__question {
+.topic__heading {
   width: 90%;
   margin-bottom: 40px;
   font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
   font-size: 48px;
   line-height: 60px;
   text-transform: capitalize;
   letter-spacing: 0.9px;
 }
 
-.topic__answer {
+.topic__text {
   margin-bottom: 32px;
   font-size: 24px;
   line-height: 36px;
@@ -528,7 +563,7 @@ header {
 }
 
 .recent-news__title {
-  margin-bottom: 17px;
+  margin: 0 0 17px -3px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   line-height: 27px;

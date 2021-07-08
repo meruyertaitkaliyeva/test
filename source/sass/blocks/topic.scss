@@ -8,17 +8,18 @@
   color: $basic-dark;
 }
   
-.topic__question {
+.topic__heading {
   width: 90%;
   margin-bottom: 40px;
   font-family: $oswald-font-family;
+  font-weight: 400;
   font-size: 48px;
   line-height: 60px;
   text-transform: capitalize;
   letter-spacing: 0.9px;
 }
   
-.topic__answer {
+.topic__text {
   margin-bottom: 32px;
   font-size: 24px;
   line-height: 36px;
